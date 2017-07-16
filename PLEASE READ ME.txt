@@ -1,0 +1,103 @@
+Hi,
+
+
+Web services are not exactly an area of strength for me, but I have tried to code RESTful services
+for the  most common HTTP transactions for a few endpoints.
+
+
+[GET : /api/employees]
+response body :
+{
+"employees" : [
+{
+"id": "id",
+"name": "name"
+}
+]
+}
+
+
+
+[PUT : /api/employees/{id}]
+request body :
+{
+"id" : "id",
+"name" :"name"
+}
+
+
+
+[DELETE: /api/employees/{id}]
+request body :
+{
+"id" : "id"
+}
+
+
+
+
+
+
+
+have additionally put an authentication filter to restrict the access
+to 2 of the methods getAllEmployees() and deleteEmployeeById().  
+I am sure, the filter could be modified to add the security token functionality.
+
+
+
+the following have been used in this project:
+
+
+Java SDK 8
+Apache Tomcat 8.5.16
+JAX-RS (Jersey 2.25.1)
+Eclipse Oxygen
+POSTMAN chrome extension
+
+
+Deployment and Testing:
+
+The WAR file needs to be deployed on the server.
+Though there is a file with the client code, i only used POSTMAN to test the methods.
+
+
+GET All
+
+http://localhost:8080/GlobalKinetic/rest/employees
+
+
+
+GET by ID
+
+http://localhost:8080/GlobalKinetic/rest/employees/1
+
+
+
+POST
+
+http://localhost:8080/GlobalKinetic/rest/employees
+
+(New employee details as application/XML in the body of the message)
+
+
+
+PUT
+
+http://localhost:8080/GlobalKinetic/rest/employees/{id}
+
+(Employee details to be updated as application/XML in the body of the message)
+
+
+
+DELETE
+
+http://localhost:8080/GlobalKinetic/rest/employees/{id}
+
+
+
+
+
+
+
+......................................................Many thanks!.............................................................................
+
