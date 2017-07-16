@@ -65,6 +65,10 @@ GET All
 
 http://localhost:8080/GlobalKinetic/rest/employees
 
+Basic authentication
+username:globalkinetic
+password:password
+
 
 
 GET by ID
@@ -89,11 +93,14 @@ http://localhost:8080/GlobalKinetic/rest/employees/{id}
 
 
 
+
 DELETE
 
 http://localhost:8080/GlobalKinetic/rest/employees/{id}
 
-
+Basic authentication
+username:globalkinetic
+password:password
 
 
 
